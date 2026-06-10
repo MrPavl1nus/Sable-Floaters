@@ -1,0 +1,1 @@
+a simple add-on for saber that adds elements to help the ship stay afloat. THE MOD IS AT A VERY EARLY STAGE OF DEVELOPMENT. At the moment, there is a block in the mod that STRONGLY pushes the ship out, but does not stabilize it.
