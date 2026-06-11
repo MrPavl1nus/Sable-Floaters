@@ -8,11 +8,13 @@ import com.pixelwasd.sablefloaters.blocks.FloatersBlocks;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.server.ServerStartedEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(SableFloaters.MODID)
@@ -35,6 +37,12 @@ public class SableFloaters {
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+    }
+
+    @SubscribeEvent
+    public void onServerStarted(ServerStartedEvent event)
+    {
+
     }
 
     // Add the example block item to the building blocks tab
