@@ -4,7 +4,7 @@
     "priority": 1001,
 
     "properties": {
-        "sable:mass": 1,
+        "sable:mass": 0.25,
         "sable:volume": 1,
         "sable:friction": 1,
         "sable:fragile": true

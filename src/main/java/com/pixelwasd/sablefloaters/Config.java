@@ -11,5 +11,17 @@ public class Config {
             .comment("A floater force")
             .defineInRange("floaterForce", 1, 0, Double.MAX_VALUE);
 
+    public static final ModConfigSpec.DoubleValue FLOATER_DAMPING_FORCE = BUILDER
+            .comment("A floater's damper force")
+            .defineInRange("floaterDamperForce", 4, 0, Double.MAX_VALUE);
+
+    public static final ModConfigSpec.DoubleValue FLOATER_MAX_LOAD = BUILDER
+            .comment("A floater's max value of load")
+            .defineInRange("floaterMaxLoad", 25, 0, Double.MAX_VALUE);
+
+    public static final ModConfigSpec.BooleanValue LOGGING = BUILDER
+            .comment("A floater's max value of load")
+            .define("logging", false);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 }
