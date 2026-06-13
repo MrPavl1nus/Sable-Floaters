@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FWS",
+    "WBW",
+    "SWF"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:string"
+    },
+    "B": {
+      "item": "minecraft:barrel"
+    },
+    "F": {
+        "item": "minecraft:stick"
+    },
+    "W": {
+        "tag": "minecraft:wooden_slabs"
+    }
+
+  },
+  "result": {
+    "id": "sablefloaters:wooden_floater",
+    "count": 16
+  }
+}

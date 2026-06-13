@@ -19,7 +19,7 @@ public class FloatersBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(SableFloaters.MODID);
 
     public static final DeferredBlock<Block> WOODEN_FLOATER = registerBlock("wooden_floater", () -> new WoodenFloaterBlock(BlockBehaviour.Properties.of()
-    .strength(1.4f).sound(SoundType.BAMBOO)));
+    .strength(1.4f).sound(SoundType.BAMBOO)));  
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
     {

@@ -20,7 +20,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 
 public class WoodenFloaterBlockEntity extends BlockEntity implements BlockEntitySubLevelActor {
-    private static final double BUOYANCY_FORCE = 1;
+    private static final float BUOYANCY_FORCE = 1; //TODO: реализовать в json для каждого поплавка
 
     public WoodenFloaterBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState blockState) {
         super(type, pos, blockState);
@@ -43,7 +43,6 @@ public class WoodenFloaterBlockEntity extends BlockEntity implements BlockEntity
 
         BlockPos worldBlockPos = new BlockPos((int)worldForcePoint.x, (int)worldForcePoint.y, (int)worldForcePoint.z);
         
-        BlockState blockState = worldLevel.getBlockState(worldBlockPos);
         FluidState fluidState = worldLevel.getFluidState(worldBlockPos);  
         
         if (fluidState.isEmpty()) {  
@@ -51,22 +50,21 @@ public class WoodenFloaterBlockEntity extends BlockEntity implements BlockEntity
         }  
         
         //Buoyancy
+        final float maxLoad = (float)Config.FLOATER_MAX_LOAD.getAsDouble() / 2f; //idk, 1-unit per 2kpg
+        final float load = Math.min((float)subLevel.getMassTracker().getMass(), maxLoad);
 
-        final double load = Math.min(subLevel.getMassTracker().getMass(), Config.FLOATER_MAX_LOAD.get());
+        final float waterLevelY = worldBlockPos.getY() + fluidState.getHeight(worldLevel, worldBlockPos);
+        final float minY = (float)(worldBlockPos.getY() + Config.DEPTH_OFFSET.getAsDouble());
+        final float depth = Math.clamp(waterLevelY - minY, 0f, 1.0f);
 
-        final double waterLevelY = worldBlockPos.getY() + fluidState.getHeight(worldLevel, worldBlockPos);
-        final double minY = worldBlockPos.getY() + 0.5;
-        final double depth = Math.clamp(waterLevelY - minY, 0, 1.0);
-
-        final double gravityMagnitude = DimensionPhysicsData.getGravity(worldLevel).length();
-        final double buoyancyForce = load * gravityMagnitude * depth * Config.GENERAL_FLOATERS_FORCE.get() * timeStep;
+        final float gravityMagnitude = (float)DimensionPhysicsData.getGravity(worldLevel).length();
+        final float buoyancyForce = (float)Math.abs(load * gravityMagnitude * depth * Config.GENERAL_FLOATERS_FORCE.get() * timeStep) * BUOYANCY_FORCE;
         
-        //Damp
-        final Vector3d vel = handle.getLinearVelocity(new Vector3d());
-        final double dampForce = -vel.y * Config.FLOATER_DAMPING_FORCE.get() * timeStep;
+        //Damp (why?)
+        final float dampForce = (float)(-buoyancyForce * Config.FLOATER_DAMPING_FORCE.getAsDouble());
 
         //Total
-        final double totalForce = buoyancyForce + dampForce;
+        final float totalForce = buoyancyForce + dampForce;
 
         //local to world
         final Quaterniond orientation = subLevel.logicalPose().orientation();
@@ -76,13 +74,12 @@ public class WoodenFloaterBlockEntity extends BlockEntity implements BlockEntity
     
         final Vector3d forcePoint = new Vector3d(localPos.getX()+ 0.5, localPos.getY()+ 0.5, localPos.getZ()+ 0.5);
         forceGroup.applyAndRecordPointForce(forcePoint, localForce);
-        // handle.addLinearAndAngularVelocity(localForce, new Vector3d(0, 0, 0));
 
         if (Config.LOGGING.get() == true)
         {
-            Sable.LOGGER.debug(Double.toString(load));
-            Sable.LOGGER.debug(Double.toString(buoyancyForce));
-            Sable.LOGGER.debug(Double.toString(depth));
+            Sable.LOGGER.debug(Float.toString(load));
+            Sable.LOGGER.debug(Float.toString(buoyancyForce));
+            Sable.LOGGER.debug(Float.toString(depth));
         }
     }
 }
