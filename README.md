@@ -2,6 +2,10 @@
 
 <sub>It's a floater!<sub>
 
+**Modrinth: https://modrinth.com/mod/sable-floaters**
+
+ **CurseForge: https://www.curseforge.com/minecraft/mc-mods/sable-floaters**
+
 # **What is Sable: Floaters?**
 
 ## **Sable: Floater is a simple add-on for sable that adds elements to help the ship stay afloat.**
