@@ -1,0 +1,19 @@
+{
+  "item.sablefloaters.wooden_floater": "Деревянный поплавок",
+  "block.sablefloaters.wooden_floater": "Деревянный поплавок",
+
+  "sablefloaters.config.general_floater_force": "Множитель силы поплавка",
+  "sablefloaters.config.general_floater_force.tooltip": "Множитель силы поплавка, настраивайте осторожно",
+
+  "sablefloaters.config.floater_damping_force": "Сила демпфера поплавка",
+  "sablefloaters.config.floater_damping_force.tooltip": "Сила, стаблизирующая поплавок",
+
+  "sablefloaters.config.floater_max_load": "Максимальная нагрузка на поплавок",
+  "sablefloaters.config.floater_max_load.tooltip": "Максимальный вес, который может выдержать поплавок",
+
+  "sablefloaters.config.logging": "Вывод в консоли",
+  "sablefloaters.config.logging.tooltip": "Вывод в консоли разработчика, если включить, то через некоторое время ваш мир зависнет",
+
+  "sablefloaters.config.depthOffset": "Отступ глубины",
+  "sablefloaters.config.depthOffset.tooltip": "Отступ глубины, используемый для расчета погружения поплавка"
+}

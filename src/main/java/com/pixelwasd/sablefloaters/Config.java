@@ -9,23 +9,28 @@ public class Config {
 
         public static final ModConfigSpec.DoubleValue GENERAL_FLOATERS_FORCE = BUILDER
                 .comment("A floater force")
+                .translation("sablefloaters.config.general_floater_force")
                 .defineInRange("floaterForce", 1, 0, Double.MAX_VALUE);
 
         public static final ModConfigSpec.DoubleValue FLOATER_DAMPING_FORCE = BUILDER
-                .comment("A floater's damper force")
-                .defineInRange("floaterDamperForce", 4, 0, Double.MAX_VALUE);
+                .comment("A floater's damper force(in development)")
+                .translation("sablefloaters.config.floater_damping_force")
+                .defineInRange("floaterDamperForce", 2, 0, Double.MAX_VALUE);
 
         public static final ModConfigSpec.DoubleValue FLOATER_MAX_LOAD = BUILDER
                 .comment("A floater's max value of load")
-                .defineInRange("floaterMaxLoad", 25, 0, Double.MAX_VALUE);
+                .translation("sablefloaters.config.floater_max_load")
+                .defineInRange("floaterMaxLoad", 10, 0, Double.MAX_VALUE);
 
         public static final ModConfigSpec.BooleanValue LOGGING = BUILDER
-                .comment("A floater's max value of load")
+                .comment("logging(for debug only)")
+                .translation("sablefloaters.config.logging")
                 .define("logging", false);
 
         public static final ModConfigSpec.DoubleValue DEPTH_OFFSET = BUILDER
                 .comment("A offset for calculation depth of block")
-                .defineInRange("depthOffset", 0.5, 0, 1);
+                .translation("sablefloaters.config.depthOffset")
+                .defineInRange("depthOffset", 0.0, 0, 1);
 
         static final ModConfigSpec SPEC = BUILDER.build();
 }

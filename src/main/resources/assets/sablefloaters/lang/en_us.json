@@ -1,4 +1,15 @@
 {
   "item.sablefloaters.wooden_floater": "Wooden floater",
-  "block.sablefloaters.wooden_floater": "Wooden floater"
+  "block.sablefloaters.wooden_floater": "Wooden floater",
+
+  "sablefloaters.config.general_floater_force": "General floater force multiplier",
+  "sablefloaters.config.general_floater_force.tooltip": "General floater force multiplier",
+  "sablefloaters.config.floater_damping_force": "Floater damping force",
+  "sablefloaters.config.floater_damping_force.tooltip": "Floater damping force(WIP)",
+  "sablefloaters.config.floater_max_load": "Max load per floater",
+  "sablefloaters.config.floater_max_load.tooltip": "Max load in kpg per floater",
+  "sablefloaters.config.logging": "Logging",
+  "sablefloaters.config.logging.tooltip": "Logging (for dev only)",
+  "sablefloaters.config.depthOffset": "Depth offset",
+  "sablefloaters.config.depthOffset.tooltip": "Depth offset for force calculation"
 }
