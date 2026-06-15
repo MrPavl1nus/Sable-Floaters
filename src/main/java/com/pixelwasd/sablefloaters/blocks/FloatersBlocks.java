@@ -19,17 +19,17 @@ public class FloatersBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(SableFloaters.MODID);
 
     public static final DeferredBlock<Block> WOODEN_FLOATER = registerBlock("wooden_floater", () -> new WoodenFloaterBlock(BlockBehaviour.Properties.of()
-    .strength(1.4f).sound(SoundType.BAMBOO)));  
+    .strength(1.4f).sound(SoundType.BAMBOO).noLootTable()), new Item.Properties().stacksTo(16));  
 
-    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block, Item.Properties itemProperties)
     {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
+        registerBlockItem(name, toReturn, itemProperties);
         return toReturn;
     }
 
-    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block){
-        FloatersItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block, Item.Properties properties){
+        FloatersItems.ITEMS.register(name, () -> new BlockItem(block.get(), properties));
     }
 
     public static void register(IEventBus eventBus) {
