@@ -54,8 +54,8 @@ public class WoodenFloaterBlockEntity extends BlockEntity implements BlockEntity
         final float load = Math.min((float)subLevel.getMassTracker().getMass(), maxLoad);
 
         final float waterLevelY = worldBlockPos.getY() + fluidState.getHeight(worldLevel, worldBlockPos);
-        final float minY = (float)(worldBlockPos.getY() + Config.DEPTH_OFFSET.getAsDouble());
-        final float depth = Math.clamp(waterLevelY - minY, 0f, 1.0f);
+        final float minY = (float)(worldBlockPos.getY());
+        final float depth = Math.clamp(0f, 1.0f, waterLevelY - minY) + (float)Config.DEPTH_OFFSET.getAsDouble();
 
         final float gravityMagnitude = (float)DimensionPhysicsData.getGravity(worldLevel).length();
         final float buoyancyForce = (float)Math.abs(load * gravityMagnitude * depth * Config.GENERAL_FLOATERS_FORCE.get() * timeStep) * BUOYANCY_FORCE;
