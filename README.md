@@ -24,7 +24,8 @@
 
 # **Config**
 
-<img width="1015" height="530" alt="2026-06-14_14-20-35" src="https://github.com/user-attachments/assets/331d7ee4-bcd3-4213-b50d-db014ca38c8a" />
+<img width="1048" height="653" alt="2026-06-15_05-11-17" src="https://github.com/user-attachments/assets/540fd613-cd61-4005-ae5c-691cfbc4f24b" />
+
 
 *cool config. woooow*
 
