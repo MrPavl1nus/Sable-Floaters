@@ -15,7 +15,7 @@ public class Config {
         public static final ModConfigSpec.DoubleValue FLOATER_DAMPING_FORCE = BUILDER
                 .comment("A floater's damper force(in development)")
                 .translation("sablefloaters.config.floater_damping_force")
-                .defineInRange("floaterDamperForce", 2, 0, Double.MAX_VALUE);
+                .defineInRange("floaterDamperForce", 0, 0, Double.MAX_VALUE);
 
         public static final ModConfigSpec.DoubleValue FLOATER_MAX_LOAD = BUILDER
                 .comment("A floater's max value of load")
