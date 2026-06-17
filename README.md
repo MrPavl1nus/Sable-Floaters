@@ -2,6 +2,10 @@
 
 <sub>It's a floater!<sub>
 
+If you have any questions or suggestions, please write to the Create Aeronautics discord topic
+
+[Discord](https://discord.com/channels/937435293294919690/1515103635225182288)
+
 **Modrinth: https://modrinth.com/mod/sable-floaters**
 
  **CurseForge: https://www.curseforge.com/minecraft/mc-mods/sable-floaters**
