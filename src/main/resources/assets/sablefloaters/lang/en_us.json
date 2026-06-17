@@ -3,7 +3,7 @@
   "block.sablefloaters.wooden_floater": "Wooden floater",
 
   "sablefloaters.config.general_floater_force": "General floater force multiplier",
-  "sablefloaters.config.general_floater_force.tooltip": "General floater force multiplier",
+  "sablefloaters.config.general_floater_force.tooltip": "General floater force multiplier. TUNE CAREFULLY",
   "sablefloaters.config.floater_damping_force": "Floater damping force",
   "sablefloaters.config.floater_damping_force.tooltip": "Floater damping force(WIP)",
   "sablefloaters.config.floater_max_load": "Max load per floater",
