@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cube_column",
+	"textures": {
+		"end": "sablefloaters:block/wooden_floater_top",
+		"side": "sablefloaters:block/wooden_floater_side"
+	}
+}

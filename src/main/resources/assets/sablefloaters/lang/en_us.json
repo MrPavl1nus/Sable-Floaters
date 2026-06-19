@@ -1,6 +1,12 @@
 {
   "item.sablefloaters.wooden_floater": "Wooden floater",
   "block.sablefloaters.wooden_floater": "Wooden floater",
+  
+  "item.sablefloaters.wooden_floater_bundle": "Wooden floater bundle",
+  "block.sablefloaters.wooden_floater_bundle": "Wooden floater bundle",
+
+  "item.sablefloaters.reinforced_wooden_floater": "Reinforced wooden floater",
+  "block.sablefloaters.reinforced_wooden_floater": "Reinforced wooden floater",
 
   "sablefloaters.config.general_floater_force": "General floater force multiplier",
   "sablefloaters.config.general_floater_force.tooltip": "General floater force multiplier. TUNE CAREFULLY",
@@ -11,5 +17,7 @@
   "sablefloaters.config.logging": "Logging",
   "sablefloaters.config.logging.tooltip": "Logging (for dev only)",
   "sablefloaters.config.depthOffset": "Depth offset",
-  "sablefloaters.config.depthOffset.tooltip": "Depth offset for force calculation"
+  "sablefloaters.config.depthOffset.tooltip": "Depth offset for force calculationю TUNE CAREFULLY",
+
+  "creativetab.sablefloaters.floaters_creative_tab": "Sable: Floaters"
 }

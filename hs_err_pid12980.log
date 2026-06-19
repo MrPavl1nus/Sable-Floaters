@@ -1,0 +1,76 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 65536 bytes for Failed to commit metaspace.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (virtualSpaceNode.cpp:112), pid=12980, tid=9256
+#
+# JRE version: Java(TM) SE Runtime Environment (21.0.10+8) (build 21.0.10+8-LTS-217)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0.10+8-LTS-217, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xmx64m -Xms64m -Dorg.gradle.appname=gradlew C:\MyMods\SableFloaters\\gradle\wrapper\gradle-wrapper.jar runClient
+
+Host: AMD Ryzen 5 7430U with Radeon Graphics         , 12 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.5915)
+Time: Fri Jun 19 03:14:27 2026 elapsed time: 83.577758 seconds (0d 0h 1m 23s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000019fbc2136f0):  JavaThread "C1 CompilerThread0" daemon [_thread_in_vm, id=9256, stack(0x0000007cb7c00000,0x0000007cb7d00000) (1024K)]
+
+
+Current CompileTask:
+C1:  83577 2173       3       java.util.ArrayList::rangeCheckForAdd (26 bytes)
+
+Stack: [0x0000007cb7c00000,0x0000007cb7d00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6d0b59]
+V  [jvm.dll+0x85fd56]
+V  [jvm.dll+0x86224e]
+V  [jvm.dll+0x862923]
+V  [jvm.dll+0x282a16]
+V  [jvm.dll+0x85bade]
+V  [jvm.dll+0x674a44]
+V  [jvm.dll+0x1e7c48]
+V  [jvm.dll+0x1e7a0e]
+V  [jvm.dll+0x67736f]
+V  [jvm.dll+0x6771a2]
+V  [jvm.dll+0x67541e]
+V  [jvm.dll+0x68679a]
+V  [jvm.dll+0x67f952]
+V  [jvm.dll+0x1f5920]
+V  [jvm.dll+0x1f5b08]
+V  [jvm.dll+0x168af1]
+V  [jvm.dll+0x168936]
+V  [jvm.dll+0x160506]
+V  [jvm.dll+0x16279d]
+V  [jvm.dll+0x160da6]
+V  [jvm.dll+0x15abc7]
+V  [jvm.dll+0x16a568]
+V  [jvm.dll+0x1560d5]
+V  [jvm.dll+0x156463]
+V  [jvm.dll+0x15672c]
+V  [jvm.dll+0x155b4c]
+V  [jvm.dll+0x15792d]
+V  [jvm.dll+0x25a629]
+V  [jvm.dll+0x258bb5]
+V  [jvm.dll+0x3f4da1]
+V  [jvm.dll+0x80a83d]

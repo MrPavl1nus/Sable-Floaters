@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NFN",
+    "FSF",
+    "NFN"
+  ],
+  "key": {
+    "F": {
+      "item": "sablefloaters:wooden_floater"
+    },
+    "S": {
+        "item": "minecraft:stick"
+    },
+    "N": {
+        "tag": "minecraft:iron_nugget"
+    }
+
+  },
+  "result": {
+    "id": "sablefloaters:reinforced_wooden_floater",
+    "count": 4
+  }
+}

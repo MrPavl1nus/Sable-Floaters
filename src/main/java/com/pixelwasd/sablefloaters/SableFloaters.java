@@ -6,7 +6,6 @@ import com.mojang.logging.LogUtils;
 import com.pixelwasd.sablefloaters.Items.FloatersItems;
 import com.pixelwasd.sablefloaters.blocks.FloatersBlocks;
 
-import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -27,6 +26,7 @@ public class SableFloaters {
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public SableFloaters(IEventBus modEventBus, ModContainer modContainer) {
+        SableFloatersCreativeTabs.register(modEventBus);
         FloatersBlocks.register(modEventBus);
         FloatersItems.register(modEventBus);
         FloatersEntities.register(modEventBus);
@@ -47,9 +47,10 @@ public class SableFloaters {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-        {
-            event.accept(FloatersBlocks.WOODEN_FLOATER);
-        }
+        // if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        // {
+        //     event.accept(FloatersBlocks.WOODEN_FLOATER);
+        //     event.accept(FloatersBlocks.WOODEN_FLOATER_BUNDLE);
+        // }
     }
 }

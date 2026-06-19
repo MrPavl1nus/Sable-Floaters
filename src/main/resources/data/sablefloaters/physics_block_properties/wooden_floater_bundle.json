@@ -1,0 +1,12 @@
+{
+	"selector": "sablefloaters:wooden_floater_bundle",
+	"priority": 1001,
+
+	"properties": {
+		"sable:mass": 1,
+		"sable:volume": 1,
+		"sable:friction": 1
+	},
+	
+	"overrides": {}
+}
