@@ -5,8 +5,8 @@
   "item.sablefloaters.wooden_floater_bundle": "Связка деревянных поплавков",
   "block.sablefloaters.wooden_floater_bundle": "Связка деревянных поплавков",
 
-  "item.sablefloaters.reinforced_wooden_floater": "Укрепленный деревянный поплавок",
-  "block.sablefloaters.reinforced_wooden_floater": "Укрепленный деревянный поплавок",
+  "item.sablefloaters.reinforced_wooden_floater": "Укреплённый деревянный поплавок",
+  "block.sablefloaters.reinforced_wooden_floater": "Укреплённый деревянный поплавок",
 
   "sablefloaters.config.general_floater_force": "Множитель силы поплавка",
   "sablefloaters.config.general_floater_force.tooltip": "Множитель силы поплавка, НАСТРАИВАЙТЕ ОСТОРОЖНО",
