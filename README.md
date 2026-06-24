@@ -33,6 +33,5 @@ If you have any questions or suggestions, please write to the Create Aeronautics
 
 *cool config. woooow*
 
-# **Alpha version!**
-
-## The mod is still in its early stages, and there are plans to add more types of floaters in the future. However, it is important to focus on the main aspect: buoyancy. The floaters may jitter near the water surface due to the depth calculation code, which will be rewritten in the near future.
+# **BE CAREFUL!**
+# **Be careful when setting up the mod, because if you set the values carelessly, your ship may literally fly away.**
